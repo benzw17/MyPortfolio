@@ -1,4 +1,11 @@
-﻿html,body {
+﻿html{
+    overflow-y: scroll;
+    margin:0;
+    padding:0;
+}
+
+body{
+    position: absolute;
     margin:0;
     padding:0;
 }
@@ -35,10 +42,10 @@ color: #ABB5BE;
 text-decoration: none;  
 }  
 
-h1{
+h1, h2, p{
 	text-align:center;
-	font-size: 48px;
 }
+
 
 #text-under-header{
 position: fixed;  
@@ -47,31 +54,18 @@ right: 0;
 top: 50px;  
 }
 
-#card-left{
-	position: relative;  
-left: 80px;  
-right: 0;  
-top: 0;
-}
 
-#card-right{
-	position: fixed;  
-left: 0;  
-right: 80px;  
-top: 200px;
-}
-
-/* Vanaf hier allemaal gepaste en nog niet gecheckt. Die kaart posities hierboven ga ik ook mogen wegdoen. */ 
+/* BEGIN- This is for the cards on the projects.html page */ 
 
 .card {
-  max-width: 960px;
+  max-width: 600px;
   border-radius: var(--border-radius-primary);
   box-shadow: 24px 24px 80px rgba(0,0,0,0.1);
-  padding: 20px 20px 28px 20px;
+  padding: 0px 100px 28px 20px;
   box-sizing: border-box;
-  margin: 20px;
+  margin-top: 0px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   
   @include mediaBig {
     flex-direction: row;
@@ -108,7 +102,6 @@ top: 200px;
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-caption);
   line-height: var(--line-height-caption);
-  text-transform: uppercase;
   color: var(--color-text);
   margin-bottom: 6px;
   
@@ -130,3 +123,20 @@ top: 200px;
   padding: 0 4px;
   margin-left: -4px;
 }
+
+.card__text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-title);
+  color: var(--color-text);
+  box-decoration-break: clone;
+  background-image: linear-gradient(90deg, var(--color-highlight-primary), var(--color-highlight-secondary));
+  background-size: 100% 42%;
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+  padding: 0 0px;
+  margin-left: 200px;
+  margin-top: 0;
+}
+
+/* END- This is for the cards on the projects.html page */
